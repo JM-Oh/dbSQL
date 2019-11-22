@@ -171,9 +171,3 @@ FROM
         ORDER BY sal DESC)) b
 WHERE a.rn = b.rn(+);
 
-
-SELECT *, ROWNUM
-FROM emp,
-    (SELECT emp.*, ROWNUM rn
-    FROM emp) a
-WHERE emp.ROWNUM = a.rn;
